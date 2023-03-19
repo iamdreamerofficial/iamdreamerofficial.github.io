@@ -105,57 +105,151 @@
         </nav>
     </div>
 </div>
-<div id="fh5co-title-box" style="background-image: url(images/programmingLanguages/python/Python.png); background-position: 0% 90.5px;" data-stellar-background-ratio="0.5">
+<div id="fh5co-title-box" style="background-image: url(images/programmingLanguages/python/Oops.png); background-position: 0% 90.5px;" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="page-title">
         <span>January 1, 2018</span>
-        <h2>Understanding Methods in Python: A Fundamental Aspect of Object-Oriented Programming</h2>
+        <h2>Understanding OOP Concepts</h2>
     </div>
 </div>
 <div id="fh5co-single-content" class="container-fluid pb-4 pt-4 paddding">
     <div class="container paddding">
         <div class="row mx-0">
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
-                <h4>Methods in Python</h4>
-                <p>In Python, a method is a function that is defined within the scope of a class. It is a callable object that belongs to an instance of the class, and it can access the instance's attributes and other methods.</p>
-                <p>Let's take a look at a simple class that defines a method:</p>
-                <p>class MyClass:
-                    def my_method(self, arg1, arg2):
-                        print("Hello, world!")
-                        print(f"The value of arg1 is {arg1}")
-                        print(f"The value of arg2 is {arg2}")</p>
-                <p>In this example, MyClass is a class that defines a method called my_method. The method takes three arguments: self, arg1, and arg2. The self argument refers to the instance of the class on which the method is called, and it is required for all methods defined within a class.</p>
-                <p>The method itself simply prints out a message to the console and the values of arg1 and arg2.</p>
-                <p>To create an instance of the MyClass class and call the my_method method, we can do the following:</p>
-                <p>my_instance = MyClass()
-                    my_instance.my_method("hello", "world")</p>
-                <p>In this example, we first create an instance of the MyClass class using the MyClass() constructor. This creates a new instance of the class that we can operate on.</p>
-                <p>Next, we call the my_method method on the my_instance object, passing in the values "hello" and "world" for arg1 and arg2, respectively. The output of this code would be:</p>
-                <p>Hello, world!
-                    The value of arg1 is hello
-                    The value of arg2 is world</p>
-                <p>As you can see, the my_method method was called on the my_instance object, and it printed out a message to the console that included the values of arg1 and arg2.</p>
-                <p>One important thing to note about methods in Python is that they can modify the state of the object on which they are called. For example, let's say we modify the MyClass class to include an instance variable called my_var:</p>
-                <p>class MyClass:
-                    def __init__(self):
-                        self.my_var = 0
+                <h4>Understanding OOP Concepts: Examples and Explanation with Code Snippets</h4>
+                <p>In programming, OOP stands for Object-Oriented Programming. OOP is a programming paradigm that is based on the concept of objects. An object is an instance of a class, which is a blueprint for creating objects. Objects have attributes (also known as properties) and behaviors (also known as methods). OOP is widely used in programming languages such as Java, C++, Python, and others.</p>
+                <p>Here are some key concepts in OOP:</p>
+                <p>1. Encapsulation: This is the practice of grouping related data and functions into a single unit, which is called a class. By doing this, the data and functions are kept together and can only be accessed through the class interface. Encapsulation provides data hiding, which means that the data is not directly accessible to other parts of the program.</p>
+                <p>2. Inheritance: This is a mechanism that allows a new class to be based on an existing class. The new class is called the derived class, and the existing class is called the base class. The derived class inherits the properties and behaviors of the base class and can add its own properties and behaviors.</p>
+                <p>3. Polymorphism: This is the ability of an object to take on multiple forms. Polymorphism can be achieved through inheritance or interfaces. Inheritance-based polymorphism is achieved by using a derived class to implement a base class method. Interface-based polymorphism is achieved by defining an interface that specifies a set of methods, and then implementing those methods in multiple classes.</p>
+                <p>Let's look at some examples of OOP in action:</p>
+                <p>Encapsulation</p>
+                <p>Encapsulation is a fundamental concept in object-oriented programming that allows developers to create complex systems by breaking them down into smaller, more manageable parts. At its core, encapsulation involves hiding the internal workings of an object from the outside world, and providing a clean, well-defined interface for interacting with that object.</p>
+                <p>The goal of encapsulation is to create a system that is easy to understand, easy to modify, and easy to maintain. By encapsulating the internal details of an object, developers can create more robust and flexible systems, and reduce the risk of unintended side-effects caused by changes to the system.</p>
+                <p>Encapsulation is achieved through a combination of access control and information hiding. Access control allows developers to specify which parts of an object's state and behavior are visible to the outside world, and which are not. Information hiding involves hiding the implementation details of an object's state and behavior, so that changes to the object's internal workings do not affect the rest of the system.</p>
+                <p>One of the primary benefits of encapsulation is that it allows developers to create modular, reusable code. By breaking a system down into smaller, encapsulated components, developers can create a library of objects that can be easily reused in other projects. This makes it easier to create complex systems from smaller, well-defined building blocks, and reduces the amount of code that needs to be written from scratch.</p>
+                <p>Another benefit of encapsulation is that it allows developers to create systems that are more secure and robust. By hiding the internal details of an object, developers can prevent unauthorized access to that object's state and behavior. This can be particularly important in systems that handle sensitive data, or that need to be protected from malicious attacks.</p>
+                <p>Encapsulation can also help to reduce the complexity of a system by providing a simpler, more intuitive interface for interacting with objects. By hiding the internal details of an object, developers can create a well-defined set of methods and properties that can be used to interact with that object. This can make it easier for developers to understand how a system works, and to modify that system without introducing unintended side-effects.</p>
+                <p>In order to achieve encapsulation, developers typically use a combination of techniques, including access control, information hiding, and abstraction. Access control involves specifying which parts of an object's state and behavior are visible to the outside world, and which are not. This is typically achieved through the use of access modifiers such as public, private, and protected, which control the visibility of an object's methods and properties.</p>
+                <p>Information hiding involves hiding the internal details of an object from the outside world. This is typically achieved through the use of private fields and methods, which can only be accessed from within the object itself. By hiding the implementation details of an object, developers can reduce the risk of unintended side-effects caused by changes to the object's internal workings.</p>
+                <p>Abstraction involves simplifying the interface for interacting with an object. This is typically achieved through the use of interfaces, which define a set of methods and properties that an object must implement in order to be considered compatible with a particular interface. By using interfaces, developers can create a simple, intuitive interface for interacting with an object, without exposing the details of its implementation.</p>
+                <p>In conclusion, encapsulation is a fundamental concept in object-oriented programming that allows developers to create modular, reusable, and secure systems by breaking them down into smaller, encapsulated components. By hiding the internal details of an object, developers can create a well-defined interface for interacting with that object, and reduce the risk of unintended side-effects caused by changes to the system. Through the use of access control, information hiding, and abstraction, developers can create systems that are easier to understand, easier to modify, and easier to maintain.</p>
+                <p>class Person:
+                    def __init__(self, name, age):
+                        self.__name = name
+                        self.__age = age
                 
-                    def my_method(self):
-                        self.my_var += 1
-                        print(f"The value of my_var is now {self.my_var}")</p>
-                <p>In this example, we've added an __init__ method to the MyClass class that initializes an instance variable called my_var to 0. We've also modified the my_method method to increment the value of my_var by 1 each time it is called.</p>
-                <p>To create an instance of the modified MyClass class and call the my_method method multiple times, we can do the following:</p>
-                <p>my_instance = MyClass()
-                   my_instance.my_method()
-                   my_instance.my_method()
-                   my_instance.my_method()</p>
-                <p>In this example, we first create an instance of the MyClass class using the MyClass() constructor. We then call the my_method method on the my_instance object three times.</p>
-                <p>The output of this code would be:</p>
-                <p>The value of my_var is now 1
-                   The value of my_var is now 2
-                   The value of my_var is now 3</p>
-                <p>As you can see, each time we called the my_method method on the my_instance object, the value of the my_var instance variable was incremented by 1.</p>
-                <p>In summary, a method in Python is a function that is defined within the scope of a class. It is a callable object that belongs to an instance of the class, and it can access the instance's attributes and other methods. Methods can modify the state of the object on which they are called and are a fundamental aspect of object-oriented programming in Python.</p>
+                    def get_name(self):
+                        return self.__name
+                
+                    def set_name(self, name):
+                        self.__name = name
+                
+                    def get_age(self):
+                        return self.__age
+                
+                    def set_age(self, age):
+                        self.__age = age
+                </p>
+                <p>In this example, the Person class has private attributes __name and __age, which can be accessed only within the class itself. The class also has public getter and setter methods for name and age, which can be used to get and set the values of these attributes from outside the class.</p>
+                <p>To access the private attributes of a Person object, you can use the getter and setter methods:</p>
+                <p>person = Person("Alice", 30)
+                    print(person.get_name())  # Output: "Alice"
+                    person.set_age(31)
+                    print(person.get_age())  # Output: 31
+                    </p>
+                <p>By using private attributes and public methods, we can encapsulate the internal details of the Person object, and provide a well-defined interface for interacting with that object. This can help to reduce the complexity of a system, and make it easier to modify and maintain over time.</p>
+                <p>Inheritance</p>
+                <p>Inheritance is a fundamental concept in object-oriented programming that allows classes to inherit attributes and methods from other classes. Inheritance allows developers to create classes that are based on other classes, and to reuse code more efficiently.</p>
+                <p>When one class inherits from another class, the child class (also known as a subclass) inherits all the attributes and methods of the parent class (also known as the superclass). The child class can then add new attributes and methods, or override existing ones.</p>
+                <p>To create a subclass in Python, you use the class keyword and specify the parent class in parentheses after the name of the child class. Here's an example:</p>
+                <p>class Animal:
+                    def __init__(self, name):
+                        self.name = name
+                
+                    def speak(self):
+                        print("")
+                
+                class Dog(Animal):
+                    def speak(self):
+                        print("Woof!")
+                </p>
+                <p>In this example, the Animal class has an attribute name and a method speak(), which does nothing. The Dog class inherits from the Animal class, and overrides the speak() method to print "Woof!".</p>
+                <p>To create an object of the Dog class, you can use the constructor method __init__():</p>
+                <p>my_dog = Dog("Rufus")
+                    print(my_dog.name)  # Output: "Rufus"
+                    my_dog.speak()  # Output: "Woof!"
+                    </p>
+                <p>Inheritance can be used to create complex class hierarchies, with multiple levels of inheritance. For example, you can create a Cat class that also inherits from the Animal class:</p>
+                <p>class Cat(Animal):
+                    def speak(self):
+                        print("Meow!")
+                </p>
+                <p>In this example, the Cat class overrides the speak() method to print "Meow!".</p>
+                <p>In addition to single inheritance (where a child class has only one parent class), Python also supports multiple inheritance (where a child class has multiple parent classes). To use multiple inheritance, you specify multiple parent classes in the parentheses after the child class:</p>
+                <p>class A:
+                    def foo(self):
+                        print("A.foo()")
+                
+                class B:
+                    def foo(self):
+                        print("B.foo()")
+                
+                class C(A, B):
+                    pass
+                
+                my_c = C()
+                my_c.foo()  # Output: "A.foo()"
+                </p>
+                <p>In this example, the C class inherits from both the A and B classes. When you call the foo() method on a C object, Python first looks for the method in the C class, then in the A class, and finally in the B class.</p>
+                <p>Inheritance can be a powerful tool for creating reusable, modular code in object-oriented programming. By creating classes that build on existing classes, you can reduce the amount of code you need to write, and make your code more organized and easy to understand. However, inheritance can also make your code more complex, so it's important to use it judiciously, and to be aware of the potential trade-offs between reuse and complexity.</p>
+                <p>Polymorphism</p>
+                <p>Polymorphism is another fundamental concept in object-oriented programming that allows objects to take on multiple forms. In other words, polymorphism allows you to write code that can work with objects of different classes, as long as those objects share a common interface.</p>
+                <p>There are two main types of polymorphism in object-oriented programming: compile-time polymorphism and runtime polymorphism.</p>
+                <p>Compile-time polymorphism is also known as method overloading, and it occurs when a class has multiple methods with the same name, but different parameters. The correct method to call is determined at compile-time, based on the number and types of arguments passed to the method.</p>
+                <p>Here's an example of method overloading in Python:</p>
+                <p>class Math:
+                    def add(self, x, y):
+                        return x + y
+                
+                    def add(self, x, y, z):
+                        return x + y + z
+                </p>
+                <p>In this example, the Math class has two add() methods, one that takes two arguments and one that takes three arguments. When you call the add() method on a Math object, Python will choose the correct method based on the number of arguments you pass in.</p>
+                <p>my_math = Math()
+                    print(my_math.add(1, 2))  # Output: 3
+                    print(my_math.add(1, 2, 3))  # Output: 6
+                    </p>
+                <p>Runtime polymorphism is also known as method overriding, and it occurs when a subclass provides its own implementation of a method that is already defined in the parent class. The correct method to call is determined at runtime, based on the actual type of the object that the method is called on.</p>
+                <p>Here's an example of method overriding in Python:</p>
+                <p>class Animal:
+                    def speak(self):
+                        print("")
+                
+                class Dog(Animal):
+                    def speak(self):
+                        print("Woof!")
+                
+                class Cat(Animal):
+                    def speak(self):
+                        print("Meow!")
+                </p>
+                <p>In this example, the Animal class has a speak() method that does nothing, while the Dog and Cat classes override the speak() method to print "Woof!" and "Meow!", respectively. When you call the speak() method on a Dog or Cat object, Python will choose the correct method based on the actual type of the object.</p>
+                <p>my_dog = Dog()
+                    my_cat = Cat()
+                    my_dog.speak()  # Output: "Woof!"
+                    my_cat.speak()  # Output: "Meow!"
+                    </p>
+                <p>Polymorphism allows you to write code that is more flexible and adaptable, because it can work with objects of different types. For example, you can write a function that takes an Animal object as an argument, and then call the speak() method on that object, without knowing whether the object is a Dog, a Cat, or some other type of animal.</p>
+                <p>def make_animal_speak(animal):
+                    animal.speak()
+                
+                my_dog = Dog()
+                my_cat = Cat()
+                make_animal_speak(my_dog)  # Output: "Woof!"
+                make_animal_speak(my_cat)  # Output: "Meow!"
+                </p>
+                <p>Polymorphism is a key concept in object-oriented programming, because it allows you to write more modular and reusable code. By designing classes that share a common interface, you can create code that is more flexible and adaptable, and that can work with a wider variety of objects.</p>
             </div>
             <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
                 <div>

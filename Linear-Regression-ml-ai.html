@@ -105,57 +105,35 @@
         </nav>
     </div>
 </div>
-<div id="fh5co-title-box" style="background-image: url(images/programmingLanguages/python/Python.png); background-position: 0% 90.5px;" data-stellar-background-ratio="0.5">
+<div id="fh5co-title-box" style="background-image: url(images/programmingLanguages/python/Machine-learning.png); background-position: 0% 90.5px;" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="page-title">
         <span>January 1, 2018</span>
-        <h2>Understanding Methods in Python: A Fundamental Aspect of Object-Oriented Programming</h2>
+        <h2>Linear Regression in Machine Learning</h2>
     </div>
 </div>
 <div id="fh5co-single-content" class="container-fluid pb-4 pt-4 paddding">
     <div class="container paddding">
         <div class="row mx-0">
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
-                <h4>Methods in Python</h4>
-                <p>In Python, a method is a function that is defined within the scope of a class. It is a callable object that belongs to an instance of the class, and it can access the instance's attributes and other methods.</p>
-                <p>Let's take a look at a simple class that defines a method:</p>
-                <p>class MyClass:
-                    def my_method(self, arg1, arg2):
-                        print("Hello, world!")
-                        print(f"The value of arg1 is {arg1}")
-                        print(f"The value of arg2 is {arg2}")</p>
-                <p>In this example, MyClass is a class that defines a method called my_method. The method takes three arguments: self, arg1, and arg2. The self argument refers to the instance of the class on which the method is called, and it is required for all methods defined within a class.</p>
-                <p>The method itself simply prints out a message to the console and the values of arg1 and arg2.</p>
-                <p>To create an instance of the MyClass class and call the my_method method, we can do the following:</p>
-                <p>my_instance = MyClass()
-                    my_instance.my_method("hello", "world")</p>
-                <p>In this example, we first create an instance of the MyClass class using the MyClass() constructor. This creates a new instance of the class that we can operate on.</p>
-                <p>Next, we call the my_method method on the my_instance object, passing in the values "hello" and "world" for arg1 and arg2, respectively. The output of this code would be:</p>
-                <p>Hello, world!
-                    The value of arg1 is hello
-                    The value of arg2 is world</p>
-                <p>As you can see, the my_method method was called on the my_instance object, and it printed out a message to the console that included the values of arg1 and arg2.</p>
-                <p>One important thing to note about methods in Python is that they can modify the state of the object on which they are called. For example, let's say we modify the MyClass class to include an instance variable called my_var:</p>
-                <p>class MyClass:
-                    def __init__(self):
-                        self.my_var = 0
-                
-                    def my_method(self):
-                        self.my_var += 1
-                        print(f"The value of my_var is now {self.my_var}")</p>
-                <p>In this example, we've added an __init__ method to the MyClass class that initializes an instance variable called my_var to 0. We've also modified the my_method method to increment the value of my_var by 1 each time it is called.</p>
-                <p>To create an instance of the modified MyClass class and call the my_method method multiple times, we can do the following:</p>
-                <p>my_instance = MyClass()
-                   my_instance.my_method()
-                   my_instance.my_method()
-                   my_instance.my_method()</p>
-                <p>In this example, we first create an instance of the MyClass class using the MyClass() constructor. We then call the my_method method on the my_instance object three times.</p>
-                <p>The output of this code would be:</p>
-                <p>The value of my_var is now 1
-                   The value of my_var is now 2
-                   The value of my_var is now 3</p>
-                <p>As you can see, each time we called the my_method method on the my_instance object, the value of the my_var instance variable was incremented by 1.</p>
-                <p>In summary, a method in Python is a function that is defined within the scope of a class. It is a callable object that belongs to an instance of the class, and it can access the instance's attributes and other methods. Methods can modify the state of the object on which they are called and are a fundamental aspect of object-oriented programming in Python.</p>
+                <h4>Linear Regression</h4>
+                <p>Linear regression is a statistical technique that is widely used in Machine Learning to model the relationship between a dependent variable and one or more independent variables. It is a linear approach that assumes a linear relationship between the dependent variable and the independent variable(s).</p>
+                <p>The goal of linear regression is to find the line of best fit that represents the relationship between the dependent variable and the independent variable(s). This line can be used to predict the value of the dependent variable for any given value of the independent variable(s).</p>
+                <p>There are two main types of linear regression: simple linear regression and multiple linear regression.</p>
+                <p>Simple linear regression is used when there is only one independent variable. The equation for simple linear regression can be expressed as:</p>
+                <p>y = mx + b</p>
+                <p>where y is the dependent variable, x is the independent variable, m is the slope of the line, and b is the y-intercept. The slope of the line represents the change in the dependent variable for each unit change in the independent variable.</p>
+                <p>Multiple linear regression is used when there are multiple independent variables. The equation for multiple linear regression can be expressed as:</p>
+                <p>y = b0 + b1x1 + b2x2 + ... + bnxn</p>
+                <p>where y is the dependent variable, x1, x2, ..., xn are the independent variables, and b0, b1, b2, ..., bn are the coefficients that represent the impact of each independent variable on the dependent variable.</p>
+                <p>The coefficients in multiple linear regression are calculated using a technique called Ordinary Least Squares (OLS). OLS is a method of finding the line of best fit that minimizes the sum of the squared differences between the actual values of the dependent variable and the predicted values of the dependent variable.</p>
+                <p>In order to use linear regression in Machine Learning, you need to have a dataset that contains the values of the dependent variable and the independent variable(s). The dataset is split into a training set and a test set. The training set is used to train the linear regression model, while the test set is used to evaluate the performance of the model.</p>
+                <p>The performance of a linear regression model is typically evaluated using two metrics: the coefficient of determination (R²) and the root-mean-square error (RMSE).</p>
+                <p>The coefficient of determination (R²) measures the proportion of the variance in the dependent variable that is explained by the independent variable(s). It ranges from 0 to 1, where 0 indicates that the model does not explain any of the variance in the dependent variable, and 1 indicates that the model explains all of the variance in the dependent variable.</p>
+                <p>The root-mean-square error (RMSE) measures the difference between the predicted values of the dependent variable and the actual values of the dependent variable. It is calculated by taking the square root of the mean of the squared differences between the predicted values and the actual values.</p>
+                <p>Linear regression can be used for a wide range of applications in Machine Learning, such as predicting stock prices, predicting customer churn, and predicting the outcome of sports events. However, it is important to note that linear regression assumes a linear relationship between the dependent variable and the independent variable(s). If the relationship is not linear, then linear regression may not be the best technique to use.</p>
+                <p>However, it is important to note that linear regression assumes a linear relationship between the dependent variable and the independent variable(s). If the relationship is not linear, then linear regression may not be the best technique to use. In such cases, non-linear regression techniques, such as polynomial regression or spline regression, may be more appropriate. These techniques allow for more complex relationships between the dependent variable and the independent variable(s) to be modeled. Additionally, linear regression assumes that the errors in the data are normally distributed and have a constant variance. If this assumption is not met, then linear regression may not be the best technique to use. In such cases, other regression techniques, such as robust regression or generalized linear models, may be more appropriate.</p>
+
             </div>
             <div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
                 <div>
